@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Groups</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Past Groups</h2>
+
+        <div class="mt-4">
+            {% if groups and groups|length > 0 %}
+                <ul class="list-group">
+                    {% for group in groups %}
+                        <li class="list-group-item">
+                            <h5>{{ group.name_ }}</h5>
+                            <p><strong>Sport:</strong> {{ group.sport }}</p>
+                            <p><strong>Description:</strong> {{ group.description_ }}</p>
+                            <p><strong>Date:</strong> {{ group.date_ }}</p>
+                            <p><strong>Time:</strong> {{ group.time_ }}</p>
+                            <p><strong>Facility:</strong> {{ facilities[group.facility_id].name_ }}</p>
+                            <a href="{{ url_for('group_details', group_id=group.id) }}" class="btn btn-info btn-sm mt-2">View Details</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="text-center">No past games to display.</p>
+            {% endif %}
+        </div>
+
+        <div class="mt-4 text-center">
+            <a href="/dashboard" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>
