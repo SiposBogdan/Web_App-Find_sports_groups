@@ -20,14 +20,13 @@ The sports partner-finding application is an innovative solution that facilitate
   - Suspend or block users in case of inappropriate behavior
 
 ## Technologies Used:
-The application is built using the following technologies:
 
--Flask - A lightweight web framework for Python.
--Flask-SQLAlchemy - ORM for handling database operations with MySQL.
--Flask-Bcrypt - Secure password hashing for user authentication.
--Flask-Caching - Improves application performance by caching database queries.
--MySQL - The relational database used to store application data.
--HTML - Frontend technology for rendering user interfaces.
+- Flask: - A lightweight web framework for Python.
+- Flask-SQLAlchemy: - ORM for handling database operations with MySQL.
+- Flask-Bcrypt: - Secure password hashing for user authentication.
+- Flask-Caching: - Improves application performance by caching database queries.
+- MySQL: - The relational database used to store application data.
+- HTML: - Frontend technology for rendering user interfaces.
 
 
 
